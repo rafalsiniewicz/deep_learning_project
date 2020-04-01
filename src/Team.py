@@ -1,8 +1,7 @@
-from Stats import Stats
-from Player import Player
-from Game import Game
+from Player import *
+from Game import *
 class Team:
-    def __init__(self, games=[], players=[], stats=dict()):
+    def __init__(self, games=[], players=[], stats=pd.DataFrame()):
         super().__init__(stats)
         self.games = games  #Game
         self.players = players  #Player
