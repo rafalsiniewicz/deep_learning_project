@@ -9,8 +9,11 @@ class Stats:
         except:
             return self.stats
 
-    def show_stats(self, stat):
-        print(self.stats[stat])
+    def show_stats(self, stat=''):
+        try:
+            print(self.stats[stat])
+        except:
+            print(stat, " column is not valid")
 
     def read_from_file(self, filename):
         df = pd.read_csv('../nba_stats/' + filename)
