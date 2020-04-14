@@ -1,5 +1,5 @@
 from nba_api.stats.endpoints import leaguegamefinder
-from os import path, mkdir
+import os
 import pandas as pd
 
 PATH = ("../data/")
@@ -13,10 +13,10 @@ def main():
     if not os.path.exists(os.path.join(PATH, FILENAME)):
         with open(os.path.join(PATH, FILENAME), 'w') as fp: 
             pass
-    games.to_csv(os.path.join(PATH, FILENAME))
+    games.to_csv(os.path.join(PATH, FILENAME), columns = 'ID' + games.columns)
 
 
-if __name__ == "__main__"
+if __name__ == "__main__":
     main()
 
 
