@@ -13,7 +13,7 @@ def main():
     if not os.path.exists(os.path.join(PATH, FILENAME)):
         with open(os.path.join(PATH, FILENAME), 'w') as fp: 
             pass
-    games.to_csv(os.path.join(PATH, FILENAME), columns = 'ID' + games.columns)
+    games.to_csv(os.path.join(PATH, FILENAME))
 
 
 if __name__ == "__main__":
